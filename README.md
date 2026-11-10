@@ -1,12 +1,12 @@
 # Recipe Agent with Gemini
 
-Adapted from the supplied `recipe_agent_gemini.ipynb` Gist into a small, maintainable Python project.
+A Python recipe assistant powered by Gemini, with a structured cookbook, ingredient substitutions and an interactive CLI.
 
-## What's changed
-- Replaced the original concatenated recipe strings with **four new structured recipes**: lemon herb pasta, chickpea curry, vegetable fried rice and banana oat pancakes.
-- Replaced the mixed legacy `google-generativeai` / `google-genai` setup with **google-genai only**.
-- Corrected tool naming and dispatch, added an **ingredient substitution tool**, and kept the model's tool-call content intact across turns.
-- Added cookbook unit tests, configuration examples and an interactive CLI.
+## Features
+- Includes **four structured recipes**: lemon herb pasta, chickpea curry, vegetable fried rice and banana oat pancakes.
+- Uses the **google-genai** SDK for Gemini integration.
+- Supports recipe search, ingredient substitution and multi-step tool calling.
+- Includes unit tests, configuration examples and an interactive CLI.
 
 ## Setup
 Python 3.10+ is recommended.
@@ -37,6 +37,3 @@ Tests run without a Gemini API key. The end-to-end model call requires a key and
 
 ## Edit recipes
 Modify `RECIPES` in `recipes.py`. Each recipe needs a title, servings, time_minutes, ingredients, steps and tags. Update `SUBSTITUTIONS` in `cookbook.py` to extend ingredient alternatives.
-
-## Original source
-[Recipe agent Gist](https://gist.github.com/ca101ca288b3f594cfb865d4bdb5279f). This project is a refactor, not an unchanged GitHub fork. Verify any upstream license before redistributing upstream code.
